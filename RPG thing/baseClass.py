@@ -2,6 +2,7 @@
 # Character/Monster base class
 # 
 # The base class to the monsters and characters
+import characters, samsCharacters
 
 class Base(object):
     """ The base class for any character/monster. """
@@ -35,8 +36,9 @@ class Base(object):
         self.dex_Mod = __setmods(self.dex)
         self.cha_Mod = __setmods(self.cha)
 
-    def __setmods(self,attribute):
+    def __setmods(self,attribute, character):
         modifier = 0
+        people = character
         if attribute = 1 :
             addition = modifier -= 5
         if attribute = 2 or attribute = 3 :
@@ -80,5 +82,7 @@ class Base(object):
         if attribute = 42 or attribute = 43 :
             addition = modifier += 16
 
+        if "Morningstar" in Cleric.inventory:
+            
         return modifier
     
